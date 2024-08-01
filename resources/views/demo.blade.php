@@ -70,6 +70,17 @@
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('departments.index') }}">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('staffs.index') }}">Staffs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('bookings.index') }}">Bookings</a>
+                    </li>
+                </ul>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
