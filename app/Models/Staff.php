@@ -9,6 +9,9 @@ class Staff extends Model
 {
     use HasFactory;
 
+    protected $table = 'staffs';
+
+
     protected $fillable = [
         'full_name',
         'department_id',
@@ -17,4 +20,9 @@ class Staff extends Model
         'salary_type',
         'salary_amount',
     ];
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
 }
