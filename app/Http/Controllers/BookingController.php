@@ -26,8 +26,8 @@ class BookingController extends Controller
             'phone' => 'required|string|max:20',
             'checkin_date' => 'required|string|max:255',
             'checkout_date' => 'required|string|max:255',
-            'total_adults' => 'required|string|max:255',
-            'total_children' => 'nullable|string|max:255',
+            'total_adults' => 'required|integer',
+            'total_children' => 'nullable|integer',
         ]);
 
         Booking::create($request->all());
@@ -52,8 +52,8 @@ class BookingController extends Controller
             'phone' => 'required|string|max:20',
             'checkin_date' => 'required|string|max:255',
             'checkout_date' => 'required|string|max:255',
-            'total_adults' => 'required|string|max:255',
-            'total_children' => 'nullable|string|max:255',
+            'total_adults' => 'required|integer',
+            'total_children' => 'nullable|integer',
         ]);
 
         $booking->update($request->all());

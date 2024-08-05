@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admintemplate')
 
 @section('content')
     <div class="container">
@@ -21,7 +21,8 @@
                     <td>{{ $department->detail }}</td>
                     <td>
                         <a href="{{ route('departments.edit', $department->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('departments.destroy', $department->id) }}" method="POST" style="display:inline-block;">
+                        <form action="{{ route('departments.destroy', $department->id) }}" method="POST"
+                              style="display:inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

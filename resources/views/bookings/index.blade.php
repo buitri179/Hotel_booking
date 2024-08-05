@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admintemplate')
 
 @section('content')
     <div class="container">
@@ -31,7 +31,8 @@
                     <td>{{ $booking->total_children }}</td>
                     <td>
                         <a href="{{ route('bookings.edit', $booking->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST" style="display:inline-block;">
+                        <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST"
+                              style="display:inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

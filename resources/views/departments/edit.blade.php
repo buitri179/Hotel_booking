@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admintemplate')
 
 @section('content')
     <div class="container">
@@ -8,7 +8,8 @@
             @method('PUT')
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" value="{{ $department->title }}" required>
+                <input type="text" class="form-control" id="title" name="title" value="{{ $department->title }}"
+                       required>
             </div>
             <div class="form-group">
                 <label for="detail">Detail</label>
